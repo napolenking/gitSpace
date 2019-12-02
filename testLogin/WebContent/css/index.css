@@ -1,0 +1,212 @@
+body {
+	background: #353f42;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.main {
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	width: 400px;
+	height: 336px;
+	background: #FFFFFF;
+	/*以下css用于让登录表单垂直居中在界面,可删除*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -165px;
+	margin-left: -230px;
+	border: 1px solid #f90b00
+}
+
+/* 登录标题头部 */
+.title {
+	width: 400px;
+	height: 40px;
+	line-height: 40px;
+	/* border: 1px solid green; */
+}
+
+.title span {
+	font-size: 18px;
+	color: #353f42;
+	position: relative;
+	right: 15px;
+}
+
+.title:hover {
+	cursor: default;
+}
+
+.title-msg span {
+	font-size: 12px;
+	color: #707472;
+}
+
+/* 输入框 */
+.input-content {
+	width: 400px;
+	height: 120px;
+	/* border: 1px solid #ff8000; */
+	padding: 0px;
+}
+
+.input-content input {
+	width: 350px;
+	height: 40px;
+	border: 1px solid #dad9d6;
+	background: #ffffff;
+	margin: 10px 10px 5px 25px;
+	
+}
+
+/* 验证码 */
+.verify-content{
+	height: 40px;
+	width: 390px;
+	font-size: 15px;
+	color: #353f42;
+	/* border: 1px solid #999; */
+	padding-top:10px;
+	padding-left:10px;
+}
+
+.verify-content p{
+	width:50px;
+	height:22px;
+	margin-left:15px;
+	padding-top:2px;
+	/* border:1px solid pink; */
+	display:block;
+	float: left;
+}
+
+.verify-content a{
+	height:22px;
+	width:45px;
+	padding-top:2px;
+	/* border:1px solid pink; */
+	display:block;
+	position: absolute;
+	top:180px;
+	left:360px;
+}
+.verify-content a:hover{
+	color:red;
+}
+.verify-content input{
+	margin-left:2px;
+	height: 24px;
+	width:100px;
+	border: 1px solid #dad9d6;
+	background: #ffffff;
+}
+.verify-content img{
+	width:120px;
+	height:25px;
+	border: 1px solid #dad9d6;
+	display:block;
+	position: absolute;
+	top:180px;
+	left:235px;
+}
+
+
+/* 登陆按钮 */
+.centers{
+	height:50px;
+	/* border: 1px solid #ff22f1; */
+	width: 400px;
+}
+
+.enter-btn {
+	width:350px;
+	color: #fff;
+	margin-left:25px;
+	margin-top:5px;
+	background: #0bc5de;
+	line-height: 40px;
+	border: 0px;
+}
+
+/* 底部链接 */
+.foor {
+	width: 400px;
+	height: 23px;
+	color: #9b9c98;
+	font-size: 12px;
+	/* border: 1px solid #0c00cf; */
+}
+
+.enter-btn:hover {
+	cursor: pointer;
+	background: #1db5c9;
+}
+
+.foor div:hover {
+	cursor: pointer;
+	color: #484847;
+	font-weight: 600;
+}
+
+.left {
+	margin-top:5px;
+	float: left;
+}
+
+.right {
+	margin-top:5px;
+	float: right;
+}
+
+a:link {
+	text-decoration: none;
+	color: #9b9c98;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #9b9c98;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #9b9c98;
+}
+
+.error{
+	width:220px;
+	height:14px;
+	/* border:1px solid black; */
+	font-size: 12px;
+	position: relative;
+	top:-12px;
+	left:95px;
+} 
+.error span{
+	/* border:1px solid red; */
+	color:red;
+	position: relative;
+	left:55px;
+}
+
+.remember{
+	width:90px;
+	height:16px;
+	color: #000000;
+	position:relative;
+	top:5px;
+	font-size: 13px;
+ 	/* border:1px solid #ff00ff; */ 
+ 	display: block;
+}
+
+.remember p>input{
+	position:relative;
+	top:2px;
+}

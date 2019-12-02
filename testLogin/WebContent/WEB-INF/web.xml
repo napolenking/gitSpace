@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="true" version="3.0">
+<display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+  	
+  <listener>
+    <listener-class>DTO.User</listener-class>
+  </listener>
+  
+<filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>LoginFilter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/Login</url-pattern>
+  </filter-mapping>
+  
+ <filter>
+    <filter-name>welcomeFilter</filter-name>
+    <filter-class>LoginFilter.welcomeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>welcomeFilter</filter-name>
+    <url-pattern>/jsp/welcome.jsp</url-pattern>
+  </filter-mapping>
+ 
+ <filter>
+    <filter-name>errorFilter</filter-name>
+    <filter-class>LoginFilter.errorFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>errorFilter</filter-name>
+    <url-pattern>/jsp/error.jsp</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <display-name>EncodingFilter</display-name>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>LoginFilter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>LoginCookie.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>Util.Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RetrievePwd</servlet-name>
+    <servlet-class>Util.RetrievePwd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetrievePwd</servlet-name>
+    <url-pattern>/RetrievePwd</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>Util.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>VerifyCodeUtils</servlet-name>
+    <servlet-class>LoginCookie.VerifyCodeUtils</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VerifyCodeUtils</servlet-name>
+    <url-pattern>/VerifyCodeUtils</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>sendEmailServlet</servlet-name>
+  	<servlet-class>com.verfiyServlet.sendEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>sendEmailServlet</servlet-name>
+  	<url-pattern>/sendEmailServlet</url-pattern>
+  </servlet-mapping>
+  
+  <jsp-config>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jsp/jstl/core-rt</taglib-uri>
+      <taglib-location>/WEB-INF/c-rt.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+</web-app>
